@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "pixel";
+  src: url("./Fonts/upheavtt.ttf") format("truetype");
+}
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: pixel;
+  letter-spacing: 2px;
+}
+
+body {
+  /* Rainbow background animation */
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1500% 100%;
+  animation: rainbow 20s linear infinite;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+:root {
+  --prim-color: #fffb00;
+  --secon-color: #0e0e0e;
+}
+
+
+.bgimg {
+  /* Gradient Background */
+  background: linear-gradient(to bottom, #141414, #000000);
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color and text shadow to all elements inside the .bgimg container */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add a font */
+  font-family: pixel;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+  border-radius: 10px;
+  /* Add a subtle box shadow */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  padding-top: 1%;
+  padding-left: 1%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-logo img {
+  margin: 0;
+  margin-left: 5%;
+  height: 150px;
+  width: auto;
+}
+
+.coming-soon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #141414;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.coming-soon-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-image: url("./banner.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+}
+
+
+.coming-soon-content {
+  z-index: 1;
+  text-align: center;
+  color: var(--prim-color);
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.coming-soon h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.coming-soon p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+.patreon-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0e0e0e00;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  font-family: pixel;
+  bottom: 10px;
+  right: 15px;
+}
+
+.patreon-link:hover {
+  background-color: #ffdc00;
+  color: var(--secon-color);
+}
+
+span:before{
+  content:'';
+  animation: animate infinite 8s;
+}
+@keyframes animate{
+  0%{
+    content: 'C'
+  }
+  10%{
+    content: 'Co'
+  }
+  20%{
+    content: 'Com'
+  }
+  30%{
+    content: 'Comi'
+  }
+  40%{
+    content: 'Comin'
+  }
+  50%{
+    content: 'Coming'
+  }
+  60%{
+    content: 'Coming S'
+  }
+  70%{
+    content: 'Coming So'
+  }
+  80%{
+    content: 'Coming Soo'
+  }
+  90%{
+    content: 'Coming Soon'
+  }
+  100%{
+    content: 'Coming Soon!'
+  }
+}
+
