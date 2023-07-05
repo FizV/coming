@@ -2,6 +2,7 @@
   font-family: "pixel";
   src: url("./Fonts/upheavtt.ttf") format("truetype");
 }
+
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -31,7 +32,6 @@ body {
   --secon-color: #0e0e0e;
 }
 
-
 .bgimg {
   /* Gradient Background */
   background: linear-gradient(to bottom, #141414, #000000);
@@ -54,7 +54,6 @@ body {
   /* Add a subtle box shadow */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-
 
 .navbar {
   display: flex;
@@ -104,7 +103,6 @@ body {
   opacity: 1;
 }
 
-
 .coming-soon-content {
   z-index: 1;
   text-align: center;
@@ -122,13 +120,6 @@ body {
   font-size: 24px;
   margin-bottom: 30px;
 }
-
-
-
-
-
-
-
 
 .patreon-link {
   display: inline-block;
@@ -150,43 +141,81 @@ body {
   color: var(--secon-color);
 }
 
-span:before{
+span:before {
   content:'';
   animation: animate infinite 8s;
 }
-@keyframes animate{
-  0%{
-    content: 'C'
+
+@keyframes animate {
+  0% {
+    content: 'C';
   }
-  10%{
-    content: 'Co'
+  10% {
+    content: 'Co';
   }
-  20%{
-    content: 'Com'
+  20% {
+    content: 'Com';
   }
-  30%{
-    content: 'Comi'
+  30% {
+    content: 'Comi';
   }
-  40%{
-    content: 'Comin'
+  40% {
+    content: 'Comin';
   }
-  50%{
-    content: 'Coming'
+  50% {
+    content: 'Coming';
   }
-  60%{
-    content: 'Coming S'
+  60% {
+    content: 'Coming S';
   }
-  70%{
-    content: 'Coming So'
+  70% {
+    content: 'Coming So';
   }
-  80%{
-    content: 'Coming Soo'
+  80% {
+    content: 'Coming Soo';
   }
-  90%{
-    content: 'Coming Soon'
+  90% {
+    content: 'Coming Soon';
   }
-  100%{
-    content: 'Coming Soon!'
+  100% {
+    content: 'Coming Soon!';
   }
 }
 
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    height: 50px;
+  }
+  
+  .navbar-logo img {
+    height: 100px;
+  }
+  
+  .coming-soon-container {
+    height: 300px;
+    width: 400px;
+  }
+  
+  .coming-soon-container img {
+    height: 20%;
+  }
+  
+  .coming-soon-content {
+    font-size: 18px;
+  }
+  
+  .coming-soon h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .coming-soon p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .patreon-link {
+    font-size: 16px;
+  }
+}
